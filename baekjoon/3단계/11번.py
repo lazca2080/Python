@@ -4,6 +4,8 @@
 내용 : 백준 3단계 11번
 """
 
+import sys
+
 while True :
     try:
         x, y = map(int, input().split())
