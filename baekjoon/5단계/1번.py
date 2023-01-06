@@ -9,9 +9,3 @@ def solve(a):
     for b in a:
         ans += b
     return ans
-
-def solve(a):
-    total = 0
-    for x in a:
-        total += x
-    return total
