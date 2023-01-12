@@ -7,10 +7,10 @@
 N = int(input())
 words = []
 wordsSet = ()
-count = 0
-total = 0
 num = 0
 numTotal = 0
+count = 0
+countTotal = 0
 
 for a in range(N):
     b = input()
@@ -18,16 +18,24 @@ for a in range(N):
 
 for word in words:
     wordsSet = set(word)
-    for alpha in list(wordsSet):
-        count = word.count(alpha)
-        total += count
-        for x in range(len(str(word))):
-            if alpha == word[x]:
+    for x in word:
+        i = 0
+        if word[i] == word[i+1]:
+            num += 1
+            numTotal += num
+        elif i == len(str(word)):
+            if word[i] == word[0]:
                 num += 1
                 numTotal += num
-            else:
-                num = 0
-                numTotal += 0
 
-print(total)
-print(numTotal)
+    for alpha in list(wordsSet):
+        count = list(word).count(alpha)
+        countTotal += count
+    
+
+        
+
+
+    
+
+
