@@ -7,10 +7,11 @@
 N = int(input())
 words = []
 wordsSet = ()
+count = 0
 num = 0
 numTotal = 0
-count = 0
-countTotal = 0
+total = 0
+result = 0
 
 for a in range(N):
     b = input()
@@ -18,20 +19,32 @@ for a in range(N):
 
 for word in words:
     wordsSet = set(word)
-    for x in word:
-        i = 0
-        if word[i] == word[i+1]:
-            num += 1
-            numTotal += num
-        elif i == len(str(word)):
-            if word[i] == word[0]:
-                num += 1
-                numTotal += num
-
     for alpha in list(wordsSet):
-        count = list(word).count(alpha)
-        countTotal += count
-    
+        # alpha 가 h일 때
+        # count 1
+        count = str(word).count(alpha)
+        # alpha 가 h일 때 num이 연속하면 +1 연속하지않으면 = 0
+        for i in range(len(str(word))):
+            if alpha == word[i]:
+                num +=1
+                numTotal = num
+            else:
+                num = 0
+        
+        # count 값과 num이 일치하지 않는다 => 연속하지 않는 문자열
+        if count != numTotal:
+            total += 1
+
+        count = 0
+        num = 0
+        numTotal = 0
+    # total이 하나라도 잡힌다 => 해당 문자열은 연속하지않음
+    if total == 0:
+        result +=1
+    total = 0
+
+print(result)
+
 
         
 
