@@ -9,7 +9,7 @@ from openpyxl import Workbook
 # 새로운 엑셀파일 생성
 workbook = Workbook()
 
-# 첫벌째 시트 활성화
+# 첫번째 시트 활성화
 sheet = workbook.active
 
 # 데이터 입력

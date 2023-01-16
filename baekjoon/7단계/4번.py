@@ -1,25 +1,15 @@
 """
-날짜 : 2023/01/02
+날짜 : 2023/01/13
 이름 : 박종협
 내용 : 백준 7단계 4번
 """
-N = list(map(int, input().split()))
+import math
 
-# 올라감
-A = N[0]
+A, B, V = map(int, input().split())
 
-# 내려감
-B = N[1]
+print(math.ceil((V-A)/(A-B))+1)
 
-# 높이
-V = N[2]
+# A B V
+# 5 1 6
 
-result = 0
-
-
-if result = V//(A-B)
-
-
-print(int(result))
-
-
+# (6-5)/4
