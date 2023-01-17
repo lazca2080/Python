@@ -24,7 +24,7 @@ count = 1
 while True:
 
     # HTML 요청
-    url = "https://news.naver.com/main/list.naver?mode=LS2D&sid2=230&sid1=105&mid=shm&date=20230116&page=%d" % pg
+    url = "https://news.naver.com/main/list.naver?mode=LS2D&sid2=230&sid1=105&mid=shm&page=%d" % pg
     html = req.get(url, headers={'User-Agent' : 'Mozilla/5.0'}).text
 
     # print(html)
