@@ -6,20 +6,19 @@
 
 N = int(input())
 
-A = N/5+(N%5)/3
-B = N/5
-C = N/3
-D = N/3+(N%3)/5
+if (N%5)%3 == 0:
+    x = N//5
+    y = (N%5)//3
+elif (N%3)%5 == 0:
+    x = N//3
+    y = (N%3)//5
+elif (N%5) == 0:
+    x = N//5
+    y = 0
+elif (N%3) == 0:
+    x = N//3
+    y = 0
+else:
+    x = -1
+    y = 0
 
-count = [A, B, C, D]
-intCount = []
-
-for a in count:
-    print(a)
-    if type(a) == int:
-        intCount.append(a)
-
-print(intCount)
-
-
-    
